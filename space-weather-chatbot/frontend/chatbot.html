@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aurora AI | Space Weather Intelligence</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="stars"></div>
+
+    <nav>
+        <div class="nav-brand">
+            <a href="index.html" style="text-decoration: none; color: inherit; display: flex; align-items: center; gap: 10px;">
+                <i class="fa-solid fa-shield-halved"></i>
+                AuraShield-AI
+            </a>
+        </div>
+        <div class="nav-links">
+            <a href="index.html">Dashboard</a>
+            <a href="simulator.html">Mitigation Simulator</a>
+            <a href="chatbot.html" class="active">AI Intelligence</a>
+        </div>
+    </nav>
+
+    <main class="single-page-container">
+        <section class="glass-panel chat-panel centered-panel">
+            <div class="chat-header">
+                <div class="chat-icon">
+                    <i class="fa-solid fa-satellite-dish"></i>
+                </div>
+                <div>
+                    <h2 style="font-size: 1.25rem;">Aurora Intelligence</h2>
+                    <p style="font-size: 0.85rem; color: #10b981;"><span class="status-dot"></span> Active Space Weather Agent</p>
+                </div>
+            </div>
+
+            <div class="chat-box" id="chat-box">
+                <div class="message bot">Greetings, Commander. I am Aurora, your advanced space weather forecasting agent. What insights about solar activity or geomagnetic risk do you require today?</div>
+                
+                <div class="loading-container" id="loading-indicator">
+                    <i class="fa-solid fa-circle-notch fa-spin"></i>
+                    <span>Analyzing heliophysics telemetry...</span>
+                </div>
+            </div>
+
+            <div class="input-area">
+                <div class="input-wrapper">
+                    <input type="text" id="user-input" placeholder="Query storm probability, solar flares, Kp indexes..." autocomplete="off"/>
+                    <button id="send-btn">
+                        <i class="fa-solid fa-paper-plane"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

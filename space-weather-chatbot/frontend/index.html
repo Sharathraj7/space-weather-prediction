@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AuraShield-AI | Mission Control Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="stars"></div>
+
+    <nav>
+        <div class="nav-brand">
+            <i class="fa-solid fa-shield-halved"></i>
+            AuraShield-AI
+        </div>
+        <div class="nav-links">
+            <a href="index.html" class="active">Dashboard</a>
+            <a href="simulator.html">Mitigation Simulator</a>
+            <a href="chatbot.html">AI Intelligence</a>
+        </div>
+    </nav>
+
+    <main class="single-page-container">
+        <section class="hero-section">
+            <h1 class="hero-title">Space Weather Mission Control</h1>
+            <p class="hero-subtitle">
+                Harnessing AI-driven physics to predict, mitigate, and translate heliophysics risks for the modern power grid.
+            </p>
+
+            <div class="tool-grid">
+                <!-- Simulation Card -->
+                <a href="simulator.html" class="tool-card">
+                    <div class="tool-icon">
+                        <i class="fa-solid fa-bolt-lightning"></i>
+                    </div>
+                    <h3>Mitigation Simulator</h3>
+                    <p>Physics-aware GIC risk assessment and adaptive oil immersion mitigation for transformer core integrity.</p>
+                </a>
+
+                <!-- Intelligence Card -->
+                <a href="chatbot.html" class="tool-card">
+                    <div class="tool-icon">
+                        <i class="fa-solid fa-satellite-dish"></i>
+                    </div>
+                    <h3>Aurora Intelligence</h3>
+                    <p>Advanced space weather conversational interface powered by local telemetry and regional storm modeling.</p>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

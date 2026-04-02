@@ -1,0 +1,8 @@
+{
+  "timestamp": "2026-04-02T00:00:00",
+  "kp_probability_1h": 0.2501,
+  "kp_probability_3h": 0.4011,
+  "kp_probability_6h": 0.5522,
+  "risk_level": "MODERATE",
+  "prediction_horizon": "3 hours"
+}

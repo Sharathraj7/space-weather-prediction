@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AuraShield Simulator | Space Weather Mission Control</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="stars"></div>
+
+    <nav>
+        <div class="nav-brand">
+            <a href="index.html" style="text-decoration: none; color: inherit; display: flex; align-items: center; gap: 10px;">
+                <i class="fa-solid fa-shield-halved"></i>
+                AuraShield-AI
+            </a>
+        </div>
+        <div class="nav-links">
+            <a href="index.html">Dashboard</a>
+            <a href="simulator.html" class="active">Mitigation Simulator</a>
+            <a href="chatbot.html">AI Intelligence</a>
+        </div>
+    </nav>
+
+    <main class="single-page-container">
+        <section class="glass-panel wide-panel">
+            <div class="sim-header">
+                <h2>AuraShield: Mitigation Simulator</h2>
+                <p>AI-driven GIC (Geomagnetically Induced Current) mitigation for power grid hardware.</p>
+            </div>
+
+            <div class="sim-content-grid">
+                <div class="controls-side">
+                    <div class="control-group">
+                        <label>CatBoost Predicted Storm Probability (Lead Time: 3h)</label>
+                        <input type="range" id="probSlider" min="0" max="1" step="0.01" value="0.2">
+                        
+                        <div class="stat-grid">
+                            <div class="stat-box">
+                                <span class="stat-label">Storm Risk</span>
+                                <span id="probVal" class="stat-val">20%</span>
+                            </div>
+                            <div class="stat-box">
+                                <span class="stat-label">GIC Intensity</span>
+                                <span id="gicVal" class="stat-val">Low</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="control-group">
+                        <label>Mitigation Strategy</label>
+                        <select id="modeSelect" style="width: 100%; padding: 12px; border-radius: 12px; background: rgba(0,0,0,0.3); color: white; border: 1px solid var(--glass-border); outline: none;">
+                            <option value="auto">AI Mitigation (Adaptive Oil Immersion)</option>
+                            <option value="manual">Manual (Standard Cooling Only)</option>
+                        </select>
+                    </div>
+
+                    <div class="stat-box" style="margin-top: 1rem;">
+                        <span class="stat-label">Calculated Core Temperature</span>
+                        <span id="tempVal" class="stat-val" style="color: #22c55e;">78.5°C</span>
+                    </div>
+                </div>
+
+                <div class="visualizer">
+                    <div class="tank-exterior">
+                        <div id="oil" class="oil-level" style="height: 30%;"></div>
+                        <div class="transformer-core" id="coreBody">
+                            <div id="glow" class="core-glow"></div>
+                            <i class="fa-solid fa-bolt" style="position: relative; z-index: 5; color: #64748b; font-size: 2rem;"></i>
+                        </div>
+                    </div>
+                    <div id="mitigationStatus" class="mitigation-badge inactive">Standard Cooling</div>
+                    <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 20px; text-align: center; max-width: 300px;">
+                        The system dynamically increases oil immersion as probability rises to shield the core from GIC-induced thermal saturation.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

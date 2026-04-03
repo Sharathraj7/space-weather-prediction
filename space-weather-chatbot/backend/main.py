@@ -33,6 +33,10 @@ async def chat_endpoint(request: ChatRequest):
     return {"response": reply}
 
 # Mount the static frontend so it runs on port 8000 alongside the API
-frontend_dir = os.path.join(os.path.dirname(__file__), "../frontend")
+frontend_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), "../frontend"))
 if os.path.exists(frontend_dir):
     app.mount("/", StaticFiles(directory=frontend_dir, html=True), name="frontend")
+else:
+    @app.get("/")
+    def fallback():
+        return {"error": "Frontend directory not found at " + frontend_dir}

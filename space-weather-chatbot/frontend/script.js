@@ -107,8 +107,10 @@ function initChatbot() {
         scrollToBottom(chatBox);
 
         try {
-            // Absolute URL to ensure connectivity in any environment
-            const response = await fetch('http://127.0.0.1:8000/chat', {
+            // Dynamically select URL: absolute for local file testing, relative for deployed web server
+            const apiUrl = window.location.protocol === 'file:' ? 'http://127.0.0.1:8000/chat' : '/chat';
+            
+            const response = await fetch(apiUrl, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

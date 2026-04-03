@@ -76,10 +76,20 @@ function initChatbot() {
 
     if (!userInput || !sendBtn) return;
 
+    function formatMessage(text) {
+        let formatted = text.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+        formatted = formatted.replace(/\n/g, '<br>');
+        return formatted;
+    }
+
     function addMessage(text, sender) {
         const msgDiv = document.createElement('div');
         msgDiv.classList.add('message', sender);
-        msgDiv.innerText = text;
+        if (sender === 'bot') {
+            msgDiv.innerHTML = formatMessage(text);
+        } else {
+            msgDiv.innerText = text;
+        }
         chatBox.insertBefore(msgDiv, loadingIndicator);
         scrollToBottom(chatBox);
     }

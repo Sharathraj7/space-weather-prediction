@@ -20,13 +20,26 @@ space-weather-chatbot/
 
 ## Setup and Run Instructions
 
-### 1. Install Dependencies
+### Preferred Method: Docker (Recommended)
+You can run the entire application (frontend + backend + dependencies) automatically using Docker from the **root directory of the project**:
+```bash
+docker-compose up --build
+```
+*Note: Make sure your `.env` file with `OPENAI_API_KEY` is present in the root folder, or export it in your shell.*
+
+Then navigate to `http://localhost:8000/`.
+
+---
+
+### Alternative Method: Local Setup
+
+#### 1. Install Dependencies
 Open your terminal and make sure you have the required packages:
 ```bash
 pip install -r requirements.txt
 ```
 
-### 2. Configure OpenAI 
+#### 2. Configure OpenAI 
 Set your OpenAI API key so the assistant can parse logic with the specified Persona.
 **Windows Command Prompt:**
 ```cmd

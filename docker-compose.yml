@@ -4,5 +4,5 @@ services:
     ports:
       - "8000:8000"
     environment:
-      # If you need to map any environment variables, such as OPENAI_API_KEY
-      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      # If you need to map any environment variables, such as GROQ_API_KEY
+      - GROQ_API_KEY=${GROQ_API_KEY}

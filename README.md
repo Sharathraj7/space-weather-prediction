@@ -43,7 +43,7 @@ Build a physics-aware geomagnetic storm forecasting system predicting Kp >= 4 at
 A full-stack Chatbot Web UI runs directly from the bundled prediction model. The easiest way to run the entire backend and frontend at once is via Docker.
 
 1. Ensure **Docker Desktop** is installed and running in the background.
-2. In the root directory, export your OpenAI API key or create an `.env` file containing `OPENAI_API_KEY="your_api_key"`.
+2. In the root directory, export your Groq API key or create an `.env` file containing `GROQ_API_KEY="your_api_key"`.
 3. Start the application:
    ```bash
    docker-compose up --build

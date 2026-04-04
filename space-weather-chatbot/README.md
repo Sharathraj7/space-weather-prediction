@@ -25,7 +25,7 @@ You can run the entire application (frontend + backend + dependencies) automatic
 ```bash
 docker-compose up --build
 ```
-*Note: Make sure your `.env` file with `OPENAI_API_KEY` is present in the root folder, or export it in your shell.*
+*Note: Make sure your `.env` file with `GROQ_API_KEY` is present in the root folder, or export it in your shell.*
 
 Then navigate to `http://localhost:8000/`.
 
@@ -39,19 +39,19 @@ Open your terminal and make sure you have the required packages:
 pip install -r requirements.txt
 ```
 
-#### 2. Configure OpenAI 
-Set your OpenAI API key so the assistant can parse logic with the specified Persona.
+#### 2. Configure Groq 
+Set your Groq API key so the assistant can parse logic with the specified Persona.
 **Windows Command Prompt:**
 ```cmd
-set OPENAI_API_KEY="sk-...."
+set GROQ_API_KEY="gsk_..."
 ```
 **Windows PowerShell:**
 ```powershell
-$env:OPENAI_API_KEY="sk-...."
+$env:GROQ_API_KEY="gsk_..."
 ```
 **Mac/Linux:**
 ```bash
-export OPENAI_API_KEY="sk-...."
+export GROQ_API_KEY="gsk_..."
 ```
 
 ### 3. Run the Backend API
